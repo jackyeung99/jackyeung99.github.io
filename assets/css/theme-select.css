@@ -1,29 +1,209 @@
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+
+
+/*  NAV BAR  */
+header {
+    padding: 20px 0; /* Increase vertical padding */
 }
 
-.btn-bd-primary {
-    --bd-violet-bg: #712cf9;
-    --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-    --bs-btn-font-weight: 600;
-    --bs-btn-color: var(--bs-white);
-    --bs-btn-bg: var(--bd-violet-bg);
-    --bs-btn-border-color: var(--bd-violet-bg);
-    --bs-btn-hover-color: var(--bs-white);
-    --bs-btn-hover-bg: #6528e0;
-    --bs-btn-hover-border-color: #6528e0;
-    --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-    --bs-btn-active-color: var(--bs-btn-hover-color);
-    --bs-btn-active-bg: #5a23c8;
-    --bs-btn-active-border-color: #5a23c8;
+.footer .container {
+    text-align: left;
+}
+.navbar {
+    padding: 20px; /* Adjust padding for the navbar */
+    font-size: 25px;
+    /* z-index: 1030; */
+    /* opacity: .8; */
 }
 
-.bd-mode-toggle {
-    z-index: 1500;
+.navbar-brand{
+    font-size: 30px;
 }
 
-.bd-mode-toggle .dropdown-menu .active .bi {
-    display: block !important;
+
+/* MAIN BODY CHANGES */
+
+body, input, select, textarea {
+    color: #868686;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 1.75em;
 }
+
+    /* background image */
+
+
+    body {
+        position: relative; /* Ensures the pseudo-element is positioned relative to the body */
+        background-attachment: fixed;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents tiling of the image */
+        margin: 0; /* Removes default body margin */
+        min-height: 100%; /* Ensures the body grows with the content */
+    }
+    
+    /* Pseudo-element for the background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixes the pseudo-element to the viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Ensures the background stays fixed */
+        filter: grayscale(100%); /* Converts the background image to black and white */
+        z-index: -1; /* Ensures the pseudo-element stays behind all other content */
+    }
+
+/* icons */
+.icon-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.icon-wrapper {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.75em;
+}
+
+    ul.icons li {
+        display: inline-block;
+        padding: 0 1em 0 0;
+    }
+
+        ul.icons li:last-child {
+            padding-right: 0;
+        }
+
+        ul.icons li .icon:before {
+            font-size: 2.5em;
+        }
+
+    ul.icons li a span {
+        font-weight: 400;
+        font-size: 1em;
+        font-family: '"Source Sans Pro"';
+    }
+
+
+/* Buttons and hyperlinks */
+
+.btn-dark{
+    background-color: #1f1815;
+    color: whitesmoke ;
+}
+
+a {
+    color: #1f1815;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color: whitesmoke
+}
+
+
+
+
+/* CARD ELEMENT */
+.blurred-box{
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    /* background: inherit; */
+    overflow: hidden;
+    backdrop-filter: blur(60px);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    padding: 40px;
+}
+
+
+.pdf-viewer {
+    margin-top: 40px;
+    height: 85vh; /* Full screen height */
+    border: 1px solid #ddd; /* Optional border */
+  }
+
+.col-sm-4 {
+    display: flex; /* Enable Flexbox for alignment */
+    justify-content: center; /* Center the carousel horizontally */
+    align-items: center; /* Center the carousel vertically */
+    height: 100%; /* Ensure the column takes the full height of the card */
+}
+
+.container-main {
+    margin-top: 40px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically (if needed) */
+    min-height: 100vh; /* Ensure it fills the viewport height */
+    padding: 2rem; /* Add some spacing */
+}
+
+.card-title{
+    font-size: 30pt;
+}
+.card-body {
+    font-size: 20pt
+}
+/* Project styling */
+.card-project {
+    margin-bottom: 1.5rem; /* Matches Bootstrap's mb-4 spacing */
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Centers content horizontally */
+    align-items: stretch; /* Centers content vertically */
+    width: 75%; /* Enforce 75% width for consistency */
+    height: 20%;
+    gap: 1.5rem;
+}
+
+/* Info section */
+.info {
+    height: 100%; /* Full height of the parent row */
+    display: flex; /* Enables Flexbox for layout control */
+    justify-content: space-between; /* Push content to top and bottom */
+    /* background-color: red; */
+}
+
+    .info .btn {
+        align-self: flex-end; /* Align button to the right */
+        margin-top: auto; /* Push the button to the bottom */
+        text-align: right; /* Align text to the right */
+    }
+
+/* Carousal side */
+.carousel-frame {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensures it fills the height of the column */
+    width: 100%;
+}
+
+.carousel-inner img {
+    object-fit: cover;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
