@@ -217,7 +217,7 @@ a:hover{
 
 hr {
     height: 4px;
-    color:#36454F ;
+    color: #1f1815;
 }
 
 h4{
@@ -228,7 +228,7 @@ h4{
 h2{
     font-size: 32pt;
     font-weight: 500;
-    color: #36454F;
+    color: #1f1815;
 }
 
 .card-text {
@@ -236,5 +236,5 @@ h2{
 }
 .card-title{
     font-size: 24pt;
-    color: #36454F;
+    color:#1f1815;
 }
