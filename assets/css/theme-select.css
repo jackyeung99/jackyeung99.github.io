@@ -119,16 +119,17 @@ a:hover{
     color: whitesmoke
 }
 
-
+ 
 
 
 /* CARD ELEMENT */
+
 .blurred-box{
     color: white;
     background: rgba(255, 255, 255, 0.2);
     /* background: inherit; */
     overflow: hidden;
-    backdrop-filter: blur(60px);
+    backdrop-filter: blur(80px);
     border-radius: 30px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
@@ -137,10 +138,12 @@ a:hover{
 
 
 .pdf-viewer {
-    margin-top: 40px;
-    height: 85vh; /* Full screen height */
-    border: 1px solid #ddd; /* Optional border */
-  }
+    display: block; /* Remove inline spacing caused by 'embed' being inline by default */
+    width: 100%; /* Ensure the PDF takes up the full width of its container */
+    height: auto; /* Set an appropriate height for the PDF viewer */
+    aspect-ratio: 1 / 1.414;
+    overflow: scroll;
+}
 
 .col-sm-4 {
     display: flex; /* Enable Flexbox for alignment */
@@ -159,12 +162,6 @@ a:hover{
     padding: 2rem; /* Add some spacing */
 }
 
-.card-title{
-    font-size: 30pt;
-}
-.card-body {
-    font-size: 20pt
-}
 /* Project styling */
 .card-project {
     margin-bottom: 1.5rem; /* Matches Bootstrap's mb-4 spacing */
@@ -176,34 +173,58 @@ a:hover{
     gap: 1.5rem;
 }
 
-/* Info section */
-.info {
-    height: 100%; /* Full height of the parent row */
-    display: flex; /* Enables Flexbox for layout control */
-    justify-content: space-between; /* Push content to top and bottom */
-    /* background-color: red; */
-}
+    .card-project hr{
+        line-height: normal;
 
-    .info .btn {
-        align-self: flex-end; /* Align button to the right */
-        margin-top: auto; /* Push the button to the bottom */
-        text-align: right; /* Align text to the right */
     }
 
+
 /* Carousal side */
-.carousel-frame {
-    display: flex;
+.carousel-slide {
+    display: fixed;
+    
 
     justify-content: center;
     align-items: center;
     height: 100%; /* Ensures it fills the height of the column */
     width: 100%;
+    
+}
+
+.carousel-inner{
+    display: flex;
+    height: 400px;
+
 }
 
 .carousel-inner img {
-    object-fit: cover;
-    max-width: 100%;
-    height: auto;
-    border-radius: 20px;
+    object-fit: contain;
+    /* object-fit: cover; */
+    max-height: 400px;
+    width: auto;
+    /* border-radius: 20px; */
 }
 
+hr {
+    height: 4px;
+    color:#36454F ;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 20;
+}
+
+h2{
+    font-size: 32pt;
+    font-weight: 500;
+    color: #36454F;
+}
+
+.card-text {
+    font-size: 16pt;
+}
+.card-title{
+    font-size: 24pt;
+    color: #36454F;
+}
