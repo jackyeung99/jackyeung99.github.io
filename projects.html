@@ -154,33 +154,34 @@
                         <div class="col-sm-7">
                           
                                 <p class="card-text">
-                                This project consisted of two major components: <strong>data engineering</strong> and <strong>machine learning modeling</strong>.
+                                This project consisted of two major components: data engineering and machine learning modeling.
                                 </p>
                             
                                 <h4>Data Engineering</h4>
                                 <p class="card-text">
-                                    I built a data pipeline to retrieve publicly available apartment listings using <strong>web scraping</strong>. 
+                                    I built a data pipeline to retrieve publicly available apartment listings using web scraping. 
                                     I developed bots to scrape HTML content for listings in a given city, parsing the extracted data and storing it as a JSONfile. 
-                                    To structure the data effectively, I designed an <strong>Entity-Relationship Diagram (ERD)</strong> and implemented a 
-                                    <strong>SQLite3</strong> relational database, ensuring robust data integrity through <strong>Pydantic</strong> for validation. 
+                                    To structure the data effectively, I designed an Entity-Relationship Diagram (ERD)and implemented a 
+                                    SQLite3relational database, ensuring robust data integrity through Pydantic for validation. 
                                     Due to the incredibly large scale of value This approach was necessary to ensure accurate predictions.
                                 </p>
                                 
                                 <h4>Machine Learning Modeling & Analysis</h4>
                                 <p class="card-text">
                                     The second phase of the project focused on analyzing the data and developing predictive models. 
-                                    Through <strong>Exploratory Data Analysis (EDA)</strong>, I identified trends and challenges in real-world data quality. 
-                                    I then built two machine learning models:
+                                    Through Exploratory Data Analysis (EDA), I identified trends and challenges in real-world data quality. 
+                                    I then built three machine learning models:
                                 </p>
                                 <ul>
                                     <li><strong>XGBoost</strong> (Extreme Gradient Boosted Trees)</li>
                                     <li><strong>Standard Neural Network</strong></li>
+                                    <li><strong>Lasso Regression </strong></li>
                                 </ul>
                                 
                                 <p class="card-text">
                                     Given the limited numerical data available from HTML content, I sought to enhance model accuracy by incorporating 
-                                    <strong>text-based features</strong>. I processed amenity descriptions using <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> 
-                                    to transform text data into numerical representations. This feature engineering approach led to a <strong>40% reduction</strong> 
+                                    text-based features. I processed amenity descriptions using <strong>TF-IDF (Term Frequency-Inverse Document Frequency)</strong> 
+                                    to transform text data into numerical representations. This feature engineering approach led to a <strong>55% reduction </strong>
                                     in the average squared error, significantly improving predictive performance.
                                 </p>
                             </p>
@@ -286,15 +287,15 @@
                         <div class="col-sm-7">
                           
                                 <p class="card-text">
-                                With the massive rise in the popularity of <strong>Machine Learning</strong>, the need for efficient computation has become 
-                                paramount. In the <strong>Engineering Cloud Computing</strong> class, we were tasked with leveraging 
-                                <strong>Google's Map-Reduce</strong> architecture to distribute workloads across multiple virtual machines.
+                                With the massive rise in the popularity of Machine Learning, the need for efficient computation has become 
+                                paramount. In the Engineering Cloud Computing class, we were tasked with leveraging 
+                                Google's Map-Reduce architecture to distribute workloads across multiple virtual machines.
                                 </p>
 
                                 <h4>Project Overview</h4>
                                 <p class="card-text">
                                     To explore distributed computing efficiency, I first identified and recreated a research paper that analyzed 
-                                    the performance of different <strong>matrix multiplication schemas</strong>. This involved designing an 
+                                    the performance of different matrix multiplication schemas>. This involved designing an 
                                     orchestration system to efficiently partition matrices into smaller chunks.
                                 </p>
 
@@ -357,7 +358,7 @@
                                 I first loaded the data, ensuring that each image was represented as an array of pixel values.
                             </p>
                             <p class="card-text">
-                                To reduce computational complexity, I applied <strong>Principal Component Analysis (PCA)</strong> to lower the dimensionality 
+                                To reduce computational complexity, I applied Principal Component Analysis (PCA) to lower the dimensionality 
                                 of the image data while retaining key features. This optimization significantly improved efficiency in model training.
                             </p>
                             <p class="card-text">
@@ -408,9 +409,9 @@
                         <div class="col-sm-7">
                           
                             <p class="card-text ">
-                                I trained multiple classification algorithms, including <strong>Support Vector Machine (SVM)</strong>, 
-                                <strong>Random Forest</strong>, and <strong>Logistic Regression</strong>, to predict fraudulent credit card transactions of European card holders. 
-                                To enhance predictive performance, I combined these models using <strong>ensemble methods</strong>.
+                                I trained multiple classification algorithms, including Support Vector Machine (SVM), 
+                                Random Forest, and Logistic Regression, to predict fraudulent credit card transactions of European card holders. 
+                                To enhance predictive performance, I combined these models using ensemble methods.
                             </p>
                             <p class="card-text">
                                 While all of the models performed well. The ensemble soft voting performed the best achieving a 
@@ -478,9 +479,9 @@
                           
                             <p class="card-text">
                                 The full-stack website includes an interface for employees and customers of an equipment rental business. 
-                                <strong>HTML, CSS, and Bootstrap</strong> ensure the site is user-friendly and provides a good user experience (UX). 
-                                Through a <strong>Python (Flask)</strong> backend, the website allows employees to efficiently manage business operations, 
-                                such as renting equipment to customers. The backend tracks and updates the <strong>MySQL</strong> database, 
+                                HTML, CSS, and Bootstrap ensure the site is user-friendly and provides a good user experience (UX). 
+                                Through a Python (Flask) backend, the website allows employees to efficiently manage business operations, 
+                                such as renting equipment to customers. The backend tracks and updates the MySQL database, 
                                 enabling small businesses to streamline their operations, improve organization, and minimize human error.
 
                             </p>
@@ -528,11 +529,11 @@
                         <div class="col-sm-7">
                           
                             <p class="card-text">
-                                Through the use of <strong>Network Science</strong>, I modeled the performance of PGA (Professional Golf Association) players when grouped with others. 
+                                Through the use of Network Science, I modeled the performance of PGA (Professional Golf Association) players when grouped with others. 
                                 The intuition for this project came from the "Tiger Effect," a phenomenon in which the large crowds following Tiger Woods caused his playing partners to struggle as a result. 
                                 
                                 This project was conducted using a combination of datasets—one provided by <a href="https://datagolf.com/">DataGolf</a> , a website that explores data science in professional golf, and another obtained through web scraping. 
-                                I used the <strong>Selenium</strong> library to simulate human interactions, specifically iterating through a dropdown menu containing different tournament years to gather relevant information. 
+                                I used the Selenium library to simulate human interactions, specifically iterating through a dropdown menu containing different tournament years to gather relevant information. 
                                 
                                 The collected data was then analyzed using statistical methods to model the relative performance changes when players were paired with different partners. The result was a graph modeling the interactions between different player pairings.
                             </p>
