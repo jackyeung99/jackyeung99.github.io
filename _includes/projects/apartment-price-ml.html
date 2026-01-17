@@ -1,31 +1,30 @@
 <p>
-  This project consisted of two major components: data engineering and machine learning modeling.
+  This project was composed of two primary components: data engineering and machine learning modeling.
 </p>
 
 <h3 class="h3 mt-3">Data Engineering</h3>
 <p>
-  I built a data pipeline to retrieve publicly available apartment listings using web scraping.
-  I developed bots to scrape HTML content for listings in a given city, parsing the extracted data and storing it as a JSON file.
-  To structure the data effectively, I designed an Entity-Relationship Diagram (ERD) and implemented a SQLite3 relational database,
-  ensuring robust data integrity through Pydantic for validation.
-  This approach was necessary to ensure accurate predictions at scale.
+  I designed and implemented an end-to-end data pipeline to collect publicly available apartment listings through web scraping.
+  Automated bots were developed to extract and parse HTML content for listings within a target city, with the resulting data stored in structured JSON files.
+  To support scalable and reliable analysis, I designed an Entity-Relationship Diagram (ERD) and implemented a SQLite3 relational database.
+  Data integrity and schema consistency were enforced using Pydantic validation, ensuring high-quality inputs for downstream modeling.
 </p>
 
 <h3 class="h3 mt-3">Machine Learning Modeling &amp; Analysis</h3>
 <p>
-  The second phase of the project focused on analyzing the data and developing predictive models.
-  Through Exploratory Data Analysis (EDA), I identified trends and challenges in real-world data quality.
-  I then built three machine learning models:
+  The second phase focused on exploratory analysis and predictive modeling.
+  Through Exploratory Data Analysis (EDA), I identified key trends as well as common challenges associated with noisy, real-world housing data.
+  I then developed and evaluated three predictive models:
 </p>
 
 <ul>
   <li><strong>XGBoost</strong> (Extreme Gradient Boosted Trees)</li>
-  <li><strong>Standard Neural Network</strong></li>
+  <li><strong>Feedforward Neural Network</strong></li>
   <li><strong>Lasso Regression</strong></li>
 </ul>
 
 <p>
-  Given the limited numerical data available from HTML content, I sought to enhance model accuracy by incorporating text-based features.
-  I processed amenity descriptions using <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong> to transform text into numerical representations.
-  This feature engineering approach led to a <strong>55% reduction</strong> in the average squared error, significantly improving predictive performance.
+  Due to the limited availability of structured numerical features from HTML listings, I enhanced model performance by incorporating text-based information.
+  Amenity descriptions were transformed into numerical features using <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong>.
+  This feature engineering strategy resulted in a <strong>55% reduction</strong> in average squared error, substantially improving predictive accuracy.
 </p>

@@ -1,6 +1,7 @@
 <section class="card shadow-sm mb-4 blurred-box">
   <div class="card-body">
 
+    <!-- Title + links row -->
     <div class="d-flex flex-wrap align-items-start justify-content-between gap-2">
       <h2 class="h2 mb-0">
         {{ p.title }}
@@ -18,33 +19,40 @@
       {% endif %}
     </div>
 
-    <div class="row g-3 mt-2 align-items-start">
-      <div class="col-12 col-md-4">
-        <div id="carousel-{{ p.id }}" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-theme="dark">
-          <div class="carousel-inner rounded overflow-hidden">
+    <!-- Carousel centered across the entire card -->
+    {% if p.images and p.images.size > 0 %}
+    <div class="carousel-row mt-3">
+        <div class="carousel-wrap">
+        <div id="carousel-{{ p.id }}" class="carousel slide carousel-fade"
+            data-bs-ride="carousel" data-bs-theme="dark">
+            <div class="carousel-inner rounded overflow-hidden">
             {% for img in p.images %}
-              <div class="carousel-item {% if forloop.first %}active{% endif %}">
-                <img src="{{ img }}" class="d-block w-100" loading="lazy" alt="{{ p.title }} image {{ forloop.index }}">
-              </div>
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img src="{{ img }}" class="d-block" loading="lazy"
+                    alt="{{ p.title }} image {{ forloop.index }}">
+                </div>
             {% endfor %}
-          </div>
+            </div>
 
-          {% if p.images and p.images.size > 1 %}
-          <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ p.id }}" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ p.id }}" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
-          {% endif %}
+            {% if p.images.size > 1 %}
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-{{ p.id }}" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-{{ p.id }}" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            {% endif %}
         </div>
-      </div>
+        </div>
+    </div>
+    {% endif %}
 
-      <div class="col-12 col-md-8">
-        {% include {{ p.content_include }} %}
-      </div>
+
+    <!-- Content below carousel -->
+    <div class="mt-3">
+      {% include {{ p.content_include }} %}
     </div>
 
   </div>

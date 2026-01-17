@@ -1,4 +1,19 @@
+- id: energy-vol
+  included: true
+  title: "Energy Volatility Forecasting &amp; Regime-Aware Risk Monitoring"
+  images:
+    - "/images/p_9/oos_forecasts.png"
+    - "/images/p_9/in_sample_fit_smoothed.png"
+  links:
+  links:
+    - label: "Dashboard"
+      url: "https://app.powerbi.com/view?r=eyJrIjoiNmJkYTg1NTgtMWZmOC00MzYwLWE5ZTgtNjRjZDBhZWExZjUwIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
+    - label: "Code"
+      url: "https://github.com/jackyeung99/proj_energy_volatility"
+  content_include: "projects/energy-vol.html"
+
 - id: higher-order-ranking
+  included: true
   title: "Efficient Inference of Rankings From Multi-Body Comparisons"
   # status: "In Review"
   images:
@@ -12,18 +27,10 @@
       url: "https://github.com/jackyeung99/higher_order_ranking"
   content_include: "projects/higher-order-ranking.html"
 
-- id: apartment-price-ml
-  title: "Energy Volatility Forecasting &amp; Regime-Aware Risk Monitoring"
-  images:
-  links:
-    - label: "Dsahboard"
-      url: "https://app.powerbi.com/view?r=eyJrIjoiNmJkYTg1NTgtMWZmOC00MzYwLWE5ZTgtNjRjZDBhZWExZjUwIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
-    - label: "Code"
-      url: "https://github.com/jackyeung99/proj_energy_volatility"
-  content_include: "projects/energy-vol.html"
 
 
 - id: apartment-price-ml
+  included: true
   title: "End-To-End Machine Learning Apartment Price Prediction Model"
   images:
     - "/images/p_2/mapping.png"
@@ -46,6 +53,7 @@
 #   content_include: "projects/portfolio-optimization.html"
 
 - id: distributed-matrix-gcp
+  included: true
   title: "Distributed Matrix Multiplication with Map-Reduce on GCP"
   images:
     - "/images/p_3/Speedup.png"
@@ -57,6 +65,7 @@
   content_include: "projects/distributed-matrix-gcp.html"
 
 - id: cnn-image-classifier
+  included: true
   title: "Image Classifier using CNN (Convolutional Neural Network)"
   images:
     - "/images/p_4/pca_scatter.png"
@@ -68,6 +77,7 @@
   content_include: "projects/cnn-image-classifier.html"
 
 - id: credit-card-fraud
+  included: true
   title: "Credit Card Fraud Detection Using Ensemble Voting"
   images:
     - "/images/p_5/ensemble.png"
@@ -78,6 +88,7 @@
   content_include: "projects/credit-card-fraud.html"
 
 - id: equipment-rental-system
+  included: false
   title: "Equipment Rental Interface"
   images:
     - "/images/p_6/ex.png"
@@ -91,6 +102,7 @@
   content_include: "projects/equipment-rental-system.html"
 
 - id: golf-network-analysis
+  included: false
   title: "Group Interactions of Professional Golf Players"
   images:
     - "/images/p_7/comp.png"

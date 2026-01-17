@@ -1,7 +1,5 @@
 @import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
-
-
 /*  NAV BAR  */
 header {
     padding: 20px 0; /* Increase vertical padding */
@@ -145,12 +143,6 @@ a:hover{
     overflow: scroll;
 }
 
-.col-sm-4 {
-    display: flex; /* Enable Flexbox for alignment */
-    justify-content: center; /* Center the carousel horizontally */
-    align-items: center; /* Center the carousel vertically */
-    height: 100%; /* Ensure the column takes the full height of the card */
-}
 
 .container-main {
     margin-top: 40px;
@@ -163,78 +155,81 @@ a:hover{
 }
 
 /* Project styling */
-.card-project {
-    margin-bottom: 1.5rem; /* Matches Bootstrap's mb-4 spacing */
-    display: flex; /* Enables Flexbox */
-    justify-content: space-between; /* Centers content horizontally */
-    align-items: stretch; /* Centers content vertically */
-    width: 75%; /* Enforce 75% width for consistency */
-    height: 20%;
-    gap: 1.5rem;
+.card-project{
+  width: min(1100px, 100%);   /* instead of 75% */
+  margin: 0 auto;             /* center the whole card */
+  display: block;             /* don't use flex here */
 }
+
 
     .card-project hr{
         line-height: normal;
 
     }
 
+/* --- FIX BOOTSTRAP CAROUSEL LAYOUT --- */
 
-/* Carousal side */
-.slide{
-    width: 80%;
-    justify-content: center;
-}
+/* don't flex the inner; let Bootstrap handle slide positioning */
 
-.carousel {
-    width: 100%;
-    max-width: 500px; /* Adjust based on your layout */
-    height: 400px;
-    justify-content: center;
-    align-items: center;
-}
 
-.carousel-inner{
-    display: flex;
-    height: 400px;
-
-}
-.carousel-item {
-    text-align: center;
-    justify-content: center;
-    position: relative;
-  }
-
-  
-.carousel-item img {
-    width: 100%; /* Ensures images fill the carousel */
-    height: auto; /* Matches carousel height */
-    object-fit: cover; /* Maintains aspect ratio while covering the frame */
-    display: block;
-    position: absolute;   
-    top: 50%;
-    transform: translateY(-50%)
-}
 
 hr {
     height: 4px;
     color: #1f1815;
 }
 
-h4{
-    font-weight: 500;
-    font-size: 20;
+h2 {
+  font-size: 2rem;        /* 32px */
+  font-weight: 500;
+  color: #1f1815;
 }
 
-h2{
-    font-size: 32pt;
-    font-weight: 500;
-    color: #1f1815;
+h4 {
+  font-size: 1.25rem;     /* 20px */
+  font-weight: 500;
+}
+
+.card-title {
+  font-size: 1.5rem;      /* 24px */
+  font-weight: 500;
+  color: #1f1815;
 }
 
 .card-text {
-    font-size: 16pt;
+  font-size: 1rem;        /* 16px */
+  line-height: 1.55;
 }
-.card-title{
-    font-size: 24pt;
-    color:#1f1815;
+
+
+/* ===== Carousel: centered + no cropping (PUT THIS AT BOTTOM) ===== */
+
+/* --- carousel centering + consistent frame (BOTTOM OF FILE) --- */
+.carousel-row {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
+
+.carousel-wrap {
+  width: min(760px, 100%);
+}
+
+/* make the inner the fixed frame */
+.carousel-wrap .carousel-inner {
+  aspect-ratio: 16 / 9;
+}
+
+/* force items to fill the frame */
+.carousel-wrap .carousel-item {
+  height: 100%;
+}
+
+/* force images to fill the frame and center */
+.carousel-wrap .carousel-item img {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: contain !important;   /* change to cover if you WANT cropping */
+  object-position: center !important;
+  display: block;
+}
+
