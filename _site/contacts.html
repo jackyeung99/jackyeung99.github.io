@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Home | Jack Yeung</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="/assets/css/theme-select.css">
+  <link rel="icon" href="/images/favicon.ico">
+
+</head>
+
+<body class="d-flex flex-column min-vh-100" style="padding-top: 88px; padding-bottom: 56px;">
+
+  <!-- HEADER -->
+  <header>
+    <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light py-3">
+      <div class="container">
+        <a class="navbar-brand" href="/">Jack Yeung</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
+            <li class="nav-item"><a class="nav-link" href="/contacts/">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <main class="container py-4">
+    <main class="flex-grow-1">
+  <div class="container py-5">
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-8 col-xl-7">
+        <div class="card blurred-box shadow-sm border-0 p-4 p-md-5">
+          <h2 class="text-center mb-2">Contact</h2>
+          <hr class="my-3">
+
+          <p class="text-center mb-4">
+            Feel free to reach out through email, LinkedIn, or by filling out the form below.
+          </p>
+
+          <!-- ICONS: stack on mobile, two columns on md+ -->
+          <div class="row g-3 mb-4">
+            <div class="col-12 col-md-6">
+              <a href="https://www.linkedin.com/in/JackCYeung/"
+                 class="d-flex align-items-center gap-3 text-decoration-none"
+                 target="_blank" rel="noopener">
+                <i class="fa-brands fa-linkedin fs-2"></i>
+                <div>
+                  <div class="fw-semibold">LinkedIn</div>
+                  <div class="text-body">JackCYeung</div>
+                </div>
+              </a>
+            </div>
+
+            <div class="col-12 col-md-6">
+              <a href="mailto:jackyeung99@gmail.com"
+                 class="d-flex align-items-center gap-3 text-decoration-none"
+                 target="_blank" rel="noopener">
+                <i class="fa-solid fa-envelope fs-2"></i>
+                <div>
+                  <div class="fw-semibold">Email</div>
+                  <div class="text-body">JackYeung99@gmail.com</div>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <form action="https://formspree.io/f/xpwqplko" method="POST">
+            <div class="row g-3">
+              <div class="col-12 col-md-6">
+                <label for="name" class="form-label mb-1">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Name" required>
+              </div>
+
+              <div class="col-12 col-md-6">
+                <label for="email" class="form-label mb-1">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Email" required>
+              </div>
+
+              <div class="col-12">
+                <label for="message" class="form-label mb-1">Message</label>
+                <textarea name="message" id="message" class="form-control" placeholder="Message" rows="5" required></textarea>
+              </div>
+
+              <div class="col-12 d-flex justify-content-end">
+                <button type="submit" class="btn btn-dark btn-lg px-4">Send Message</button>
+              </div>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="mt-auto py-2 bg-light fixed-bottom">
+    <div class="container">
+      <span class="text-muted">Copyright © 2025 Jack Yeung</span>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

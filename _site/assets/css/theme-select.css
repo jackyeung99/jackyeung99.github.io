@@ -1,0 +1,240 @@
+@import url("fontawesome-all.min.css");
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400italic");
+
+
+/*  NAV BAR  */
+header {
+    padding: 20px 0; /* Increase vertical padding */
+}
+
+.footer .container {
+    text-align: left;
+}
+.navbar {
+    padding: 20px; /* Adjust padding for the navbar */
+    font-size: 25px;
+    /* z-index: 1030; */
+    /* opacity: .8; */
+}
+
+.navbar-brand{
+    font-size: 30px;
+}
+
+
+/* MAIN BODY CHANGES */
+
+body, input, select, textarea {
+    color: #868686;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 16pt;
+    font-weight: 400;
+    line-height: 1.75em;
+}
+
+    /* background image */
+
+
+    body {
+        position: relative; /* Ensures the pseudo-element is positioned relative to the body */
+        background-attachment: fixed;
+        background-size: cover; /* Ensures the image covers the entire screen */
+        background-position: center; /* Centers the image */
+        background-repeat: no-repeat; /* Prevents tiling of the image */
+        margin: 0; /* Removes default body margin */
+        min-height: 100%; /* Ensures the body grows with the content */
+    }
+    
+    /* Pseudo-element for the background */
+    body::before {
+        content: "";
+        position: fixed; /* Fixes the pseudo-element to the viewport */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url("../../images/bg.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-attachment: fixed; /* Ensures the background stays fixed */
+        filter: grayscale(100%); /* Converts the background image to black and white */
+        z-index: -1; /* Ensures the pseudo-element stays behind all other content */
+    }
+
+/* icons */
+.icon-wrapper img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.icon-wrapper {
+    position: absolute;
+    top: 100px;
+    right: 40px;
+}
+
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.75em;
+}
+
+    ul.icons li {
+        display: inline-block;
+        padding: 0 1em 0 0;
+    }
+
+        ul.icons li:last-child {
+            padding-right: 0;
+        }
+
+        ul.icons li .icon:before {
+            font-size: 2.5em;
+        }
+
+    ul.icons li a span {
+        font-weight: 400;
+        font-size: 1em;
+        font-family: '"Source Sans Pro"';
+    }
+
+
+/* Buttons and hyperlinks */
+
+.btn-dark{
+    background-color: #1f1815;
+    color: whitesmoke ;
+}
+
+a {
+    color: #1f1815;
+    text-decoration: none;
+}
+
+
+a:hover{
+    color: whitesmoke
+}
+
+ 
+
+
+/* CARD ELEMENT */
+
+.blurred-box{
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    /* background: inherit; */
+    overflow: hidden;
+    backdrop-filter: blur(80px);
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    padding: 40px;
+}
+
+
+.pdf-viewer {
+    display: block; /* Remove inline spacing caused by 'embed' being inline by default */
+    width: 100%; /* Ensure the PDF takes up the full width of its container */
+    height: auto; /* Set an appropriate height for the PDF viewer */
+    aspect-ratio: 1 / 1.414;
+    overflow: scroll;
+}
+
+.col-sm-4 {
+    display: flex; /* Enable Flexbox for alignment */
+    justify-content: center; /* Center the carousel horizontally */
+    align-items: center; /* Center the carousel vertically */
+    height: 100%; /* Ensure the column takes the full height of the card */
+}
+
+.container-main {
+    margin-top: 40px;
+    display: flex; /* Enable Flexbox */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    flex-direction: column; /* Stack items vertically (if needed) */
+    min-height: 100vh; /* Ensure it fills the viewport height */
+    padding: 2rem; /* Add some spacing */
+}
+
+/* Project styling */
+.card-project {
+    margin-bottom: 1.5rem; /* Matches Bootstrap's mb-4 spacing */
+    display: flex; /* Enables Flexbox */
+    justify-content: space-between; /* Centers content horizontally */
+    align-items: stretch; /* Centers content vertically */
+    width: 75%; /* Enforce 75% width for consistency */
+    height: 20%;
+    gap: 1.5rem;
+}
+
+    .card-project hr{
+        line-height: normal;
+
+    }
+
+
+/* Carousal side */
+.slide{
+    width: 80%;
+    justify-content: center;
+}
+
+.carousel {
+    width: 100%;
+    max-width: 500px; /* Adjust based on your layout */
+    height: 400px;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-inner{
+    display: flex;
+    height: 400px;
+
+}
+.carousel-item {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  
+.carousel-item img {
+    width: 100%; /* Ensures images fill the carousel */
+    height: auto; /* Matches carousel height */
+    object-fit: cover; /* Maintains aspect ratio while covering the frame */
+    display: block;
+    position: absolute;   
+    top: 50%;
+    transform: translateY(-50%)
+}
+
+hr {
+    height: 4px;
+    color: #1f1815;
+}
+
+h4{
+    font-weight: 500;
+    font-size: 20;
+}
+
+h2{
+    font-size: 32pt;
+    font-weight: 500;
+    color: #1f1815;
+}
+
+.card-text {
+    font-size: 16pt;
+}
+.card-title{
+    font-size: 24pt;
+    color:#1f1815;
+}

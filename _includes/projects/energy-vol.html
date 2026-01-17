@@ -1,0 +1,59 @@
+
+  <h3>Overview</h3>
+  <p>
+    I built an end-to-end system to <strong>forecast and monitor energy-sector volatility (XLE)</strong> using
+    econometric models and regime-switching dynamics, deployed in a fully automated cloud environment.
+    The project integrates financial, macroeconomic, and exogenous data to support daily risk assessment
+    and volatility-conditioned decision making.
+  </p>
+  <p>
+    Originally developed for a Financial Econometrics course, the system was extended into a
+    <strong>production-style pipeline</strong> with automated retraining, evaluation, and dashboarding.
+  </p>
+
+  <h3>Data &amp; Features</h3>
+  <ul>
+    <li><strong>Market data:</strong> intraday prices (15-minute bars) to compute realized variance</li>
+    <li><strong>Macroeconomic signals:</strong> interest rates, volatility indices (VIX, OVX), energy prices</li>
+    <li><strong>Exogenous features:</strong> weather anomaly z-scores and extreme-event flags</li>
+  </ul>
+  <p>
+    All data is versioned and stored in a <strong>bronze / silver / gold</strong> S3 data-lake structure for reproducibility.
+  </p>
+
+  <h3>Modeling</h3>
+  <p>
+    I implemented and benchmarked multiple <strong>econometric volatility models</strong>:
+  </p>
+  <ul>
+    <li>EWMA</li>
+    <li>GARCH</li>
+    <li>HAR-RV</li>
+  </ul>
+  <p>
+    Models are retrained on rolling windows and evaluated strictly <strong>out-of-sample</strong> using <strong>QLIKE</strong>.
+    To capture structural changes in volatility, I added a <strong>Markov regime-switching model</strong> to infer
+    latent Low / Medium / High volatility states and track regime persistence and transition risk.
+  </p>
+
+  <h3>System &amp; Deployment</h3>
+  <ul>
+    <li>Dockerized pipelines on <strong>AWS ECS Fargate</strong></li>
+    <li><strong>EventBridge</strong> for scheduled daily execution</li>
+    <li><strong>S3, Glue, and Athena</strong> for analytics-ready storage</li>
+    <li><strong>Power BI dashboards</strong> for forecasts, regimes, and performance metrics</li>
+  </ul>
+  <p>
+    The system runs fully automatically and produces daily, versioned outputs for risk monitoring.
+  </p>
+
+  <h3>Key Takeaways</h3>
+  <ul>
+    <li>Translates <strong>econometric theory into a production-grade system</strong></li>
+    <li>Emphasizes automation, reproducibility, and out-of-sample validation</li>
+    <li>Designed for <strong>real-world risk monitoring</strong>, not just point forecasting</li>
+  </ul>
+
+  <p>
+    <strong>Tools:</strong> Python, Pandas, Statsmodels, AWS (S3, ECS, EventBridge, Glue, Athena), Docker, Power BI
+  </p>
