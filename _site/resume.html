@@ -41,18 +41,33 @@
   <!-- PAGE CONTENT -->
   <main class="container py-4">
     <div class="container-main">
-    <div class="card blurred-box" style="width: 50vw; height:auto;">
-        <div class="col-12">
-            <h2 class="text-center">Resume</h2>
-            <hr>
-            <embed
-                src="/images/Jack_Yeung_Resume.pdf"
-                type="application/pdf"
-                class="pdf-viewer">
-        </div>
+  <div class="card blurred-box resume-card">
+    <h2 class="text-center">Resume</h2>
+    <hr>
+
+    <!-- Embedded PDF (desktop/tablet) -->
+    <div class="pdf-wrapper">
+      <embed
+        src="/images/Jack_Yeung_Resume.pdf"
+        type="application/pdf"
+        class="pdf-viewer"
+      />
     </div>
+
+    <!-- Mobile fallback -->
+    <div class="resume-download">
+      <a
+        href="/images/Jack_Yeung_Resume.pdf"
+        class="btn btn-primary"
+        target="_blank"
+        rel="noopener"
+      >
+        Download Resume (PDF)
+      </a>
+    </div>
+  </div>
 </div>
-        
+
   </main>
 
   <!-- FOOTER -->
