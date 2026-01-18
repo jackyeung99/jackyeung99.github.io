@@ -2,8 +2,13 @@
   included: true
   title: "Energy Volatility Forecasting &amp; Regime-Aware Risk Monitoring"
   images:
+    - "/images/p_9/Markov.png"
     - "/images/p_9/oos_forecasts.png"
+    - "/images/p_9/wind_anom.png"
     - "/images/p_9/in_sample_fit_smoothed.png"
+    - "/images/p_9/dash_1.png"
+    - "/images/p_9/dash_2.png"
+    - "/images/p_9/dash_3.png"
   links:
     - label: "Dashboard"
       url: "https://app.powerbi.com/view?r=eyJrIjoiNmJkYTg1NTgtMWZmOC00MzYwLWE5ZTgtNjRjZDBhZWExZjUwIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
