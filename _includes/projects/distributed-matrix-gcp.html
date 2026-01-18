@@ -1,16 +1,16 @@
-<p>
+<p class="card-text">
   As machine learning workloads continue to grow in scale and complexity, efficient computation has become increasingly critical.
   In the Engineering Cloud Computing course, I was tasked with leveraging Google’s MapReduce architecture to distribute computational workloads across multiple virtual machines.
 </p>
 
-<h3 class="h3 mt-3">Project Overview</h3>
-<p>
+<h3 class="card-header">Project Overview</h3>
+<p class="card-text">
   To study the performance benefits of distributed computing, I identified and replicated a research paper evaluating alternative matrix multiplication schemes.
   This required designing an orchestration framework capable of partitioning large matrices into smaller submatrices and coordinating their execution efficiently.
 </p>
 
-<h3 class="h3 mt-3">Implementation on Google Cloud Platform</h3>
-<p>
+<h3 class="card-header">Implementation on Google Cloud Platform</h3>
+<p class="card-text">
   Each matrix was decomposed into appropriately sized chunks, with pairs of submatrices dispatched to
   <strong>Google Cloud Platform (GCP)</strong> serverless functions for parallel computation.
   The partial results were then aggregated to reconstruct the final matrix.

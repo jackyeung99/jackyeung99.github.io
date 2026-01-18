@@ -1,17 +1,17 @@
-<p>
+<p class="card-text">
   This project was composed of two primary components: data engineering and machine learning modeling.
 </p>
 
-<h3 class="h3 mt-3">Data Engineering</h3>
-<p>
+<h3 class="card-header">Data Engineering</h3>
+<p class="card-text">
   I designed and implemented an end-to-end data pipeline to collect publicly available apartment listings through web scraping.
   Automated bots were developed to extract and parse HTML content for listings within a target city, with the resulting data stored in structured JSON files.
   To support scalable and reliable analysis, I designed an Entity-Relationship Diagram (ERD) and implemented a SQLite3 relational database.
   Data integrity and schema consistency were enforced using Pydantic validation, ensuring high-quality inputs for downstream modeling.
 </p>
 
-<h3 class="h3 mt-3">Machine Learning Modeling &amp; Analysis</h3>
-<p>
+<h3 class="card-header">Machine Learning Modeling &amp; Analysis</h3>
+<p class="card-text">
   The second phase focused on exploratory analysis and predictive modeling.
   Through Exploratory Data Analysis (EDA), I identified key trends as well as common challenges associated with noisy, real-world housing data.
   I then developed and evaluated three predictive models:
@@ -23,7 +23,7 @@
   <li><strong>Lasso Regression</strong></li>
 </ul>
 
-<p>
+<p class="card-text">
   Due to the limited availability of structured numerical features from HTML listings, I enhanced model performance by incorporating text-based information.
   Amenity descriptions were transformed into numerical features using <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong>.
   This feature engineering strategy resulted in a <strong>55% reduction</strong> in average squared error, substantially improving predictive accuracy.

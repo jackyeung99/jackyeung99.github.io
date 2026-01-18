@@ -18,7 +18,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light py-3">
       <div class="container">
-        <a class="navbar-brand" href="/">Jack Yeung</a>
+        <a class="navbar-brand" href="/index.html">Jack Yeung</a>
 
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
@@ -28,9 +28,10 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav ms-auto">
 
-              <li class="nav-item"><a class="nav-link" href="/projects/">Projects</a></li>
-              <li class="nav-item"><a class="nav-link" href="/resume/">Resume</a></li>
-              <li class="nav-item"><a class="nav-link" href="/contacts/">Contact</a></li>
+              <li class="nav-item"><a class="nav-link" href="/projects.html">Projects</a></li>
+              <li class="nav-item"><a class="nav-link" href="/resume.html">Resume</a></li>
+              <li class="nav-item"><a class="nav-link" href="/contacts.html">Contact</a></li>
+
           </ul>
         </div>
       </div>
@@ -117,34 +118,57 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">Pandas</span>
+        
+        <span class="badge rounded-pill tool-chip">NumPy</span>
+        
+        <span class="badge rounded-pill tool-chip">Statsmodels</span>
+        
+        <span class="badge rounded-pill tool-chip">AWS ECS / Fargate</span>
+        
+        <span class="badge rounded-pill tool-chip">S3</span>
+        
+        <span class="badge rounded-pill tool-chip">Athena</span>
+        
+        <span class="badge rounded-pill tool-chip">Power BI</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
       
-  <h3>Overview</h3>
-  <p>
+  <h3 class="card-header">Overview</h3>
+  <p class="card-text">
     I built an end-to-end system to <strong>forecast and monitor energy-sector volatility (XLE)</strong> using
     econometric models and regime-switching dynamics, deployed in a fully automated cloud environment.
     The project integrates financial, macroeconomic, and exogenous data to support daily risk assessment
     and volatility-conditioned decision making.
   </p>
-  <p>
+  <p class="card-text">
     Originally developed for a Financial Econometrics course, the system was extended into a
     <strong>production-style pipeline</strong> with automated retraining, evaluation, and dashboarding.
   </p>
 
-  <h3>Data &amp; Features</h3>
+  <h3 class="card-header">Data &amp; Features</h3>
   <ul>
     <li><strong>Market data:</strong> intraday prices (15-minute bars) to compute realized variance</li>
     <li><strong>Macroeconomic signals:</strong> interest rates, volatility indices (VIX, OVX), energy prices</li>
     <li><strong>Exogenous features:</strong> weather anomaly z-scores and extreme-event flags</li>
   </ul>
-  <p>
+  <p class="card-text">
     All data is versioned and stored in a <strong>bronze / silver / gold</strong> S3 data-lake structure for reproducibility.
   </p>
 
-  <h3>Modeling</h3>
-  <p>
+  <h3 class="card-header">Modeling</h3>
+  <p class="card-text">
     I implemented and benchmarked multiple <strong>econometric volatility models</strong>:
   </p>
   <ul>
@@ -152,24 +176,24 @@
     <li>GARCH</li>
     <li>HAR-RV</li>
   </ul>
-  <p>
+  <p class="card-text">
     Models are retrained on rolling windows and evaluated strictly <strong>out-of-sample</strong> using <strong>QLIKE</strong>.
     To capture structural changes in volatility, I added a <strong>Markov regime-switching model</strong> to infer
     latent Low / Medium / High volatility states and track regime persistence and transition risk.
   </p>
 
-  <h3>System &amp; Deployment</h3>
+  <h3 class="card-header">System &amp; Deployment</h3>
   <ul>
     <li>Dockerized pipelines on <strong>AWS ECS Fargate</strong></li>
     <li><strong>EventBridge</strong> for scheduled daily execution</li>
     <li><strong>S3, Glue, and Athena</strong> for analytics-ready storage</li>
     <li><strong>Power BI dashboards</strong> for forecasts, regimes, and performance metrics</li>
   </ul>
-  <p>
+  <p class="card-text">
     The system runs fully automatically and produces daily, versioned outputs for risk monitoring.
   </p>
 
-  <p>
+  <p class="card-text">
     <strong>Tools:</strong> Python, Pandas, Statsmodels, AWS (S3, ECS, EventBridge, Glue, Athena), Docker, Power BI
   </p>
     </div>
@@ -241,10 +265,29 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">NumPy</span>
+        
+        <span class="badge rounded-pill tool-chip">SciPy</span>
+        
+        <span class="badge rounded-pill tool-chip">NetworkX</span>
+        
+        <span class="badge rounded-pill tool-chip">Matplotlib</span>
+        
+        <span class="badge rounded-pill tool-chip">Jupyter</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
-      <p>
+      <p class="card-text">
   This paper presents a generalization of the efficient iterative update originally developed by Mark Newman for the
   Bradley-Terry (BT) model, extending it from pairwise comparisons to
   multi-entity interactions under the Plackett-Luce framework.
@@ -252,22 +295,22 @@
   latent player or entity strength.
 </p>
 
-<h3 class="h3 mt-3">Two-Entity vs. Multi-Entity Interactions</h3>
-<p>
+<h3 class="card-header">Two-Entity vs. Multi-Entity Interactions</h3>
+<p class="card-text">
   Two-entity interactions involve head-to-head comparisons between two players, teams, or items, such as
   <em>soccer matches</em> or <em>boxing bouts</em>.
   In contrast, multi-entity interactions arise in settings where outcomes involve more than two participants, including
   <em>Formula One races</em>, <em>ranked-choice competitions</em>, and <em>tournament-style events</em>.
 </p>
 
-<h3 class="h3 mt-3">Extending the Bradley-Terry Model</h3>
-<p>
+<h3 class="card-header">Extending the Bradley-Terry Model</h3>
+<p class="card-text">
   To support higher-order interactions, the framework leverages hypergraphs, which generalize traditional graphs by allowing edges to connect multiple entities.
   The likelihood function is reformulated accordingly, enabling the efficient iterative structure of the Bradley-Terry model to be preserved under multi-body settings.
   This extension allows for faster and more scalable estimation of entity strength in complex competitive environments.
 </p>
 
-<p>
+<p class="card-text">
   The proposed method was evaluated using both real-world preference data and synthetically generated datasets, providing a comprehensive assessment of its performance and robustness.
 </p>
 
@@ -338,23 +381,48 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">Pandas</span>
+        
+        <span class="badge rounded-pill tool-chip">Pydantic</span>
+        
+        <span class="badge rounded-pill tool-chip">Scrapy</span>
+        
+        <span class="badge rounded-pill tool-chip">Scikit-learn</span>
+        
+        <span class="badge rounded-pill tool-chip">XGBoost</span>
+        
+        <span class="badge rounded-pill tool-chip">GeoPandas</span>
+        
+        <span class="badge rounded-pill tool-chip">Matplotlib</span>
+        
+        <span class="badge rounded-pill tool-chip">Seaborn</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
-      <p>
+      <p class="card-text">
   This project was composed of two primary components: data engineering and machine learning modeling.
 </p>
 
-<h3 class="h3 mt-3">Data Engineering</h3>
-<p>
+<h3 class="card-header">Data Engineering</h3>
+<p class="card-text">
   I designed and implemented an end-to-end data pipeline to collect publicly available apartment listings through web scraping.
   Automated bots were developed to extract and parse HTML content for listings within a target city, with the resulting data stored in structured JSON files.
   To support scalable and reliable analysis, I designed an Entity-Relationship Diagram (ERD) and implemented a SQLite3 relational database.
   Data integrity and schema consistency were enforced using Pydantic validation, ensuring high-quality inputs for downstream modeling.
 </p>
 
-<h3 class="h3 mt-3">Machine Learning Modeling &amp; Analysis</h3>
-<p>
+<h3 class="card-header">Machine Learning Modeling &amp; Analysis</h3>
+<p class="card-text">
   The second phase focused on exploratory analysis and predictive modeling.
   Through Exploratory Data Analysis (EDA), I identified key trends as well as common challenges associated with noisy, real-world housing data.
   I then developed and evaluated three predictive models:
@@ -366,7 +434,7 @@
   <li><strong>Lasso Regression</strong></li>
 </ul>
 
-<p>
+<p class="card-text">
   Due to the limited availability of structured numerical features from HTML listings, I enhanced model performance by incorporating text-based information.
   Amenity descriptions were transformed into numerical features using <strong>TF-IDF (Term Frequency–Inverse Document Frequency)</strong>.
   This feature engineering strategy resulted in a <strong>55% reduction</strong> in average squared error, substantially improving predictive accuracy.
@@ -439,22 +507,39 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">Google Cloud Functions</span>
+        
+        <span class="badge rounded-pill tool-chip">Google Cloud Storage</span>
+        
+        <span class="badge rounded-pill tool-chip">MapReduce</span>
+        
+        <span class="badge rounded-pill tool-chip">NumPy</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
-      <p>
+      <p class="card-text">
   As machine learning workloads continue to grow in scale and complexity, efficient computation has become increasingly critical.
   In the Engineering Cloud Computing course, I was tasked with leveraging Google’s MapReduce architecture to distribute computational workloads across multiple virtual machines.
 </p>
 
-<h3 class="h3 mt-3">Project Overview</h3>
-<p>
+<h3 class="card-header">Project Overview</h3>
+<p class="card-text">
   To study the performance benefits of distributed computing, I identified and replicated a research paper evaluating alternative matrix multiplication schemes.
   This required designing an orchestration framework capable of partitioning large matrices into smaller submatrices and coordinating their execution efficiently.
 </p>
 
-<h3 class="h3 mt-3">Implementation on Google Cloud Platform</h3>
-<p>
+<h3 class="card-header">Implementation on Google Cloud Platform</h3>
+<p class="card-text">
   Each matrix was decomposed into appropriately sized chunks, with pairs of submatrices dispatched to
   <strong>Google Cloud Platform (GCP)</strong> serverless functions for parallel computation.
   The partial results were then aggregated to reconstruct the final matrix.
@@ -528,19 +613,36 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">PyTorch</span>
+        
+        <span class="badge rounded-pill tool-chip">NumPy</span>
+        
+        <span class="badge rounded-pill tool-chip">Scikit-learn</span>
+        
+        <span class="badge rounded-pill tool-chip">Matplotlib</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
-      <p>
+      <p class="card-text">
   The FashionMNIST dataset consists of images representing various clothing types. To process this dataset, I first loaded the data, ensuring that each image was represented as an array of pixel values.
-</p>
+</p >
 
-<p>
+<p class="card-text">
   To reduce computational complexity, I applied Principal Component Analysis (PCA) to lower the dimensionality of the image data while retaining key features.
   This optimization significantly improved efficiency in model training.
 </p>
 
-<p>
+<p class="card-text">
   Using the processed dataset, I designed and trained a <strong>Convolutional Neural Network (CNN)</strong> to classify images into their respective clothing categories.
   After 20 epochs of training, the model achieved an <strong>90% accuracy</strong> in correctly identifying clothing classes.
 </p>
@@ -607,26 +709,43 @@
     </div>
     
 
+    
+    <div class="mt-3 d-flex flex-wrap justify-content-center gap-2 tools-row">
+        
+        <span class="badge rounded-pill tool-chip">Python</span>
+        
+        <span class="badge rounded-pill tool-chip">Scikit-learn</span>
+        
+        <span class="badge rounded-pill tool-chip">XGBoost</span>
+        
+        <span class="badge rounded-pill tool-chip">Pandas</span>
+        
+        <span class="badge rounded-pill tool-chip">Matplotlib</span>
+        
+    </div>
+    
+
+
 
     <!-- Content below carousel -->
     <div class="mt-3">
-      <p>
+      <p class="card-text">
   I trained and evaluated several classification models—including Support Vector Machines (SVM), Random Forests, and Logistic Regression—to identify fraudulent credit card transactions among European cardholders.
   To improve predictive performance and robustness, these models were combined using ensemble learning techniques.
-</p>
+</p >
 
-<p>
+<p class="card-text">
   While each individual model performed well, a soft-voting ensemble achieved the strongest results, reaching an overall
   98% classification accuracy in fraud detection based on 14 anonymized input features.
 </p>
 
-<p>
+<p class="card-text">
   It is important to note that the dataset contains highly informative features, and performance of this magnitude may not generalize to noisier, real-world environments.
   Nevertheless, this project provided hands-on experience with ensemble methods and model evaluation, offering practical insight into techniques commonly used in applied fraud detection systems.
 </p>
 
-<h3 class="h3 mt-3">Dataset</h3>
-<p>
+
+<p class="card-text">
   The dataset used in this project was sourced from Kaggle:
   <a href="https://www.kaggle.com/datasets/nelgiriyewithana/credit-card-fraud-detection-dataset-2023?resource=download" target="_blank" rel="noopener">
     Credit Card Fraud Detection Dataset (2023)

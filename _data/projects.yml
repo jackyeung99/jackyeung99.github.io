@@ -5,17 +5,24 @@
     - "/images/p_9/oos_forecasts.png"
     - "/images/p_9/in_sample_fit_smoothed.png"
   links:
-  links:
     - label: "Dashboard"
       url: "https://app.powerbi.com/view?r=eyJrIjoiNmJkYTg1NTgtMWZmOC00MzYwLWE5ZTgtNjRjZDBhZWExZjUwIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
     - label: "Code"
       url: "https://github.com/jackyeung99/proj_energy_volatility"
   content_include: "projects/energy-vol.html"
+  tools:
+    - Python
+    - Pandas
+    - NumPy
+    - Statsmodels
+    - AWS ECS / Fargate
+    - S3
+    - Athena
+    - Power BI
 
 - id: higher-order-ranking
   included: true
   title: "Efficient Inference of Rankings From Multi-Body Comparisons"
-  # status: "In Review"
   images:
     - "/images/p_1/Convergence.png"
     - "/images/p_1/rank.png"
@@ -26,8 +33,13 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/higher_order_ranking"
   content_include: "projects/higher-order-ranking.html"
-
-
+  tools:
+    - Python
+    - NumPy
+    - SciPy
+    - NetworkX
+    - Matplotlib
+    - Jupyter
 
 - id: apartment-price-ml
   included: true
@@ -40,17 +52,16 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/apartment_finder"
   content_include: "projects/apartment-price-ml.html"
-
-# - id: portfolio-optimization
-#   title: "Portfolio Optimization"
-#   images:
-#     - "/images/p_8/forecast.png"
-#     - "/images/p_8/hierarchy.png"
-#     - "/images/p_8/trade_off.png"
-#   links:
-#     - label: "Code"
-#       url: "https://github.com/jackyeung99/Acme_Case_Study/blob/main/Report.ipynb"
-#   content_include: "projects/portfolio-optimization.html"
+  tools:
+    - Python
+    - Pandas
+    - Pydantic
+    - Scrapy
+    - Scikit-learn
+    - XGBoost
+    - GeoPandas
+    - Matplotlib
+    - Seaborn
 
 - id: distributed-matrix-gcp
   included: true
@@ -63,6 +74,12 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/Engineering_Cloud_Computing/tree/Assignment_1/Assignment03"
   content_include: "projects/distributed-matrix-gcp.html"
+  tools:
+    - Python
+    - Google Cloud Functions
+    - Google Cloud Storage
+    - MapReduce
+    - NumPy
 
 - id: cnn-image-classifier
   included: true
@@ -75,6 +92,12 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/Applied_Machine_Learning/blob/main/Assignment03/03_Q2.ipynb"
   content_include: "projects/cnn-image-classifier.html"
+  tools:
+    - Python
+    - PyTorch
+    - NumPy
+    - Scikit-learn
+    - Matplotlib
 
 - id: credit-card-fraud
   included: true
@@ -86,6 +109,12 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/Applied_Machine_Learning/blob/main/Assignment02/02_Q2.ipynb"
   content_include: "projects/credit-card-fraud.html"
+  tools:
+    - Python
+    - Scikit-learn
+    - XGBoost
+    - Pandas
+    - Matplotlib
 
 - id: equipment-rental-system
   included: false
@@ -95,11 +124,15 @@
     - "/images/p_6/home.png"
     - "/images/p_6/equipment.png"
   links:
-    # - label: "Website"
-      # url: "https://cgi.luddy.indiana.edu/~jayeun/i211_project/"
     - label: "Code"
       url: "https://github.iu.edu/i211sp2024/jayeun_i211_project"
   content_include: "projects/equipment-rental-system.html"
+  tools:
+    - Python
+    - Flask
+    - HTML / CSS
+    - SQLite
+    - SQLAlchemy
 
 - id: golf-network-analysis
   included: false
@@ -111,3 +144,9 @@
     - label: "Code"
       url: "https://github.com/jackyeung99/Golf_Network_Analysis"
   content_include: "projects/golf-network-analysis.html"
+  tools:
+    - Python
+    - Pandas
+    - NetworkX
+    - NumPy
+    - Matplotlib

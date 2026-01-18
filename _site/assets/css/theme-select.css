@@ -100,6 +100,7 @@ ul.icons {
     }
 
 
+
 /* Buttons and hyperlinks */
 
 .btn-dark{
@@ -181,7 +182,7 @@ hr {
 h2 {
   font-size: 2rem;        /* 32px */
   font-weight: 500;
-  color: #1f1815;
+  /* color: #1f1815; */
 }
 
 h4 {
@@ -190,16 +191,27 @@ h4 {
 }
 
 .card-title {
-  font-size: 1.5rem;      /* 24px */
+  font-size: 1.4rem;        /* ~22px */
   font-weight: 500;
-  color: #1f1815;
+}
+
+.card-header {
+  background: transparent !important;
+  border-bottom: none !important;
+  font-size: 1.4rem;
+}
+
+/* Lists slightly smaller than body */
+.card ul {
+  font-size: 0.95rem;       /* ~15px */
+  line-height: 1.45;
+  padding-left: 1.25rem;
 }
 
 .card-text {
-  font-size: 1rem;        /* 16px */
+  font-size: 1rem;          /* 16px */
   line-height: 1.55;
 }
-
 
 /* ===== Carousel: centered + no cropping (PUT THIS AT BOTTOM) ===== */
 
@@ -233,3 +245,9 @@ h4 {
   display: block;
 }
 
+
+
+.badge.text-bg-light.border {
+  background: rgba(255,255,255,0.65) !important;
+  border-color: rgba(0,0,0,0.12) !important;
+}
