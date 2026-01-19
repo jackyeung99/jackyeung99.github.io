@@ -11,7 +11,7 @@
     - "/images/p_9/dash_3.png"
   links:
     - label: "Dashboard"
-      url: "https://app.powerbi.com/view?r=eyJrIjoiNmJkYTg1NTgtMWZmOC00MzYwLWE5ZTgtNjRjZDBhZWExZjUwIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
+      url: "https://app.powerbi.com/view?r=eyJrIjoiOWExZDZhMmQtNzZkYS00MWRiLWJhZDItOTAxMjY0MjNhYmNiIiwidCI6IjExMTNiZTM0LWFlZDEtNGQwMC1hYjRiLWNkZDAyNTEwYmU5MSIsImMiOjN9"
     - label: "Code"
       url: "https://github.com/jackyeung99/proj_energy_volatility"
   content_include: "projects/energy-vol.html"
